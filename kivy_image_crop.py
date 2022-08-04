@@ -1,3 +1,6 @@
+""""
+Kivy App created in order to facilitate image cropping and presenting in form of an app
+"""
 import tkinter as tk
 from tkinter import filedialog as fd
 from pathlib import Path
@@ -94,14 +97,15 @@ class Core(GridLayout):
         ...
 
     def _show(self, _):
-        img = Img.open(str(self.file))
-        cropped_img = img.crop((int(self.slider_x_lab.text),
-                                int(self.slider_y_lab.text),
-                                int(self.slider_x_lab_end.text),
-                                int(self.slider_y_lab_end.text)))
-        cropped_img.save(str(TEMP_FILE))
-        self.image_crop.source = str(TEMP_FILE)
-        self.image_crop.reload()
+        if self.file:
+            img = Img.open(str(self.file))
+            cropped_img = img.crop((int(self.slider_x_lab.text),
+                                    int(self.slider_y_lab.text),
+                                    int(self.slider_x_lab_end.text),
+                                    int(self.slider_y_lab_end.text)))
+            cropped_img.save(str(TEMP_FILE))
+            self.image_crop.source = str(TEMP_FILE)
+            self.image_crop.reload()
 
     def on_val1(self, _, val):
         self.slider_x_lab.text = str(int(val))
