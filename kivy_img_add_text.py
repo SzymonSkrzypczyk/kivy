@@ -1,3 +1,6 @@
+"""
+App created in order to add text onto an image
+"""
 from random import choice
 import tkinter as tk
 from tkinter import filedialog as fd
