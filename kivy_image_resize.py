@@ -1,3 +1,6 @@
+"""
+App created in order to resize all images from a chosen directory
+"""
 import tkinter as tk
 from tkinter import filedialog as fd
 from pathlib import Path
