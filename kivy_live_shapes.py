@@ -1,3 +1,6 @@
+"""
+This app enables user to draw shapes onto an image
+"""
 from typing import Tuple
 import tkinter as tk
 from tkinter import filedialog as fd
