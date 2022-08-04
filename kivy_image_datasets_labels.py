@@ -1,3 +1,7 @@
+"""
+App created in order to create datasets based on images with either positive or negative sentiment
+, which is evaluated by a user
+"""
 import tkinter as tk
 from tkinter.filedialog import askdirectory
 from pathlib import Path
