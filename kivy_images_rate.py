@@ -1,3 +1,6 @@
+"""
+App created to rate images either positive, or negative
+"""
 import tkinter as tk
 from tkinter import filedialog as fd
 from pathlib import Path
