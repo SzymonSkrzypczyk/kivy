@@ -1,3 +1,6 @@
+"""
+App enabling user to apply filters on an image
+"""
 import tkinter as tk
 from tkinter import filedialog as fd
 from uuid import uuid4
@@ -156,6 +159,7 @@ class Core(GridLayout):
         self.img1.source = str(self.path)
 
     def _save(self, _):
+        self.remove_widget(self.save_lay)
         self.add_widget(self.save_lay)
 
     def confirm_save(self, _):
