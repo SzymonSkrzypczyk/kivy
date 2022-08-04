@@ -1,3 +1,6 @@
+"""
+Simply an attempt to create a simple translator in kivy
+"""
 from translate import Translator
 import kivy
 from kivy.uix.button import Button
